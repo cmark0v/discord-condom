@@ -1,5 +1,8 @@
 #docker-discord
 
+![docker-discord](concord.png)
+
+
 scripts to make discord client run in docker containerized XPRA session. for safety/security and to allow it to be put in the background and silenced completely and seamlessly brought back
 
  havent tried mic and camera
