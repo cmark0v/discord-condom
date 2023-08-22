@@ -14,7 +14,7 @@ RUN groupadd -g $UID dubuntu
 RUN useradd -m -p x -g $UID -s /bin/bash dubuntu
 RUN ln -s /bin/echo /usr/bin/wget
 #keep this creep from sending crash reports over rest withot asking
-COPY discord-0.0.*.tar.gz /home/dubuntu/discord.tar.gz
+COPY discord-0.0.latest.tar.gz /home/dubuntu/discord.tar.gz
 WORKDIR /home/dubuntu
 USER dubuntu
 RUN tar xvzf discord.tar.gz
