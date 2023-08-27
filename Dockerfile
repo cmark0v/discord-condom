@@ -14,10 +14,11 @@ RUN groupadd -g $UID dubuntu
 RUN useradd -m -p x -g $UID -s /bin/bash dubuntu
 RUN ln -s /bin/echo /usr/bin/wget
 #keep this creep from sending crash reports over rest withot asking
-COPY discord-0.0.*.tar.gz /home/dubuntu/discord.tar.gz
+COPY discord-0.0.*.deb /home/dubuntu/discord.deb
 WORKDIR /home/dubuntu
+RUN dpkg -i discord.deb
+
 USER dubuntu
-RUN tar xvzf discord.tar.gz
 ENV port=$port
 ENV USER=dubuntu
 COPY entrypoint.sh /home/dubuntu/entry.sh
